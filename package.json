@@ -1,0 +1,24 @@
+{
+  "name": "artefact-test-generator",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/test-artefacts/artefact-test-generator.git"
+  },
+  "author": "Guilherme Rogatto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/test-artefacts/artefact-test-generator/issues"
+  },
+  "homepage": "https://github.com/test-artefacts/artefact-test-generator#readme",
+  "dependencies": {
+    "ora": "^8.1.0",
+    "pdfmake": "^0.2.14"
+  }
+}
