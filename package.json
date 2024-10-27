@@ -5,7 +5,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "commandline": "node commandline.js",
+    "pdf:example": "node example-pdf-creation.js"
+
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 import PdfPrinter from 'pdfmake';
 import fs from 'fs';
 
-var fonts = {
+let fonts = {
 	Roboto: {
 		normal: 'fonts/Roboto-Regular.ttf',
 		bold: 'fonts/Roboto-Medium.ttf',
@@ -10,9 +10,9 @@ var fonts = {
 	}
 };
 
-export default function pdfModel(description){
+export default async function pdfModel(description){
     let printer = new PdfPrinter(fonts);
-    let pdfDoc = printer.createPdfKitDocument(description);
+    let pdfDoc =  printer.createPdfKitDocument(description);
     pdfDoc.pipe(fs.createWriteStream('test-plan.pdf'));
     pdfDoc.end();
 }
