@@ -1,4 +1,4 @@
-# artefact-test-generator
+# test-artefact
 
 Assure you have installed nodeJS and npm:
 
