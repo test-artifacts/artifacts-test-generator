@@ -7,7 +7,6 @@
   "scripts": {
     "commandline": "node commandline.js",
     "pdf:example": "node example-pdf-creation.js"
-
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/test-artefacts/artefact-test-generator#readme",
   "dependencies": {
+    "inquirer": "^12.0.1",
     "ora": "^8.1.0",
     "pdfmake": "^0.2.14"
   }

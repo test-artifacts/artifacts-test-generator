@@ -1,5 +1,13 @@
 # artefact-test-generator
 
+Assure you have installed nodeJS and npm:
+
+https://nodejs.org/en/download/package-manager
+
+Make sure you have those versions of nodeJS at least:
+
+Node.js 20.x, 22.x and above (You may find some issues if you try an older version)
+
 ## To install it:
 
 ```
@@ -11,6 +19,10 @@ npm install
 ```
 npm commandline
 ```
+
+![plot](commandline-example.png)
+
+The PDF will be generated in the root directory you ran the command
 
 ## Generate test plan as an example:
 
