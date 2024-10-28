@@ -1,4 +1,4 @@
-# artefact-test-generator
+# test-artefact
 
 Assure you have installed nodeJS and npm:
 
@@ -29,3 +29,7 @@ The PDF will be generated in the root directory you ran the command
 ```
 npm pdf:example
 ```
+
+The test plan will look like:
+
+![plot](test-plan-example.png)
