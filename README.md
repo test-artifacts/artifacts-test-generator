@@ -6,8 +6,14 @@
 npm install
 ```
 
-## To run it:
+## Commandline Usage:
 
 ```
-npm test
+npm commandline
+```
+
+## Generate test plan as an example:
+
+```
+npm pdf:example
 ```

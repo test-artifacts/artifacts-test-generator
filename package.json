@@ -1,11 +1,13 @@
 {
-  "name": "artefact-test-generator",
+  "name": "test-artefact",
   "version": "1.0.0",
   "description": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "commandline": "node commandline.js",
+    "pdf:example": "node example-pdf-creation.js"
+
   },
   "repository": {
     "type": "git",

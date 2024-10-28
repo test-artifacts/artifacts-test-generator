@@ -1,17 +1,18 @@
 import readline from 'readline'
 const input = process.stdin
 const output = process.stdout
+import pdfModel from './pdf/pdf-model.js'
+import { getPDFContent } from './pdf/models/template.js'
+import chalk from 'chalk';
 
 const selectOption = {}
-
-// I need to implement it
 
 selectOption.selectIndex = 0
 selectOption.options = ['frontend', 'backend', 'frontend + backend']
 selectOption.selector = '*'
 selectOption.isFirstTimeShowMenu = true
 
-const keyPressedHandler = (_, key) => {
+const keyPressedHandler = async (_, key) => {
     if (key) {
         const optionLength = selectOption.options.length - 1 
         if ( key.name === 'down' && selectOption.selectIndex < optionLength) {
@@ -23,6 +24,13 @@ const keyPressedHandler = (_, key) => {
             selectOption.createOptionMenu()
         }
         else if (key.name === 'escape' || (key.name === 'c' && key.ctrl)) {
+
+            console.log(chalk.blue(`\nYou selected: ${selectOption.options[selectOption.selectIndex]}`));
+
+            let pdfContent = getPDFContent('My project', selectOption.options[selectOption.selectIndex])
+            
+            pdfModel(pdfContent)
+
             selectOption.close()
         }
     }
@@ -58,18 +66,15 @@ const ansiColors = (text, color) => {
     if (colors[color]) `\x1b[${colors[color]}m${text}\x1b[0m`
     //default for colors not included
     return `\x1b[32m${text}\x1b[0m`
-
-    
 }
 
 selectOption.init = ()=> {
-    const question = "Which of these do you prefer ?"
+    const question = chalk.blue("Are you aiming to create a test plan for which kind of components?")
     console.log(question)
 
     readline.emitKeypressEvents(input)
     selectOption.start()
 }
-
 
 selectOption.start = () => {
     //setup the input for reading
@@ -82,10 +87,9 @@ selectOption.start = () => {
     }
 }
 
-selectOption.close = () => {
+selectOption.close = async () => {
     input.setRawMode(false)
     input.pause()
-    process.exit(0)
 }
 
 selectOption.getPadding = (num = 10) => {
@@ -118,5 +122,4 @@ selectOption.createOptionMenu = () => {
     }
 }
 
-
-selectOption.init()
+await selectOption.init()
