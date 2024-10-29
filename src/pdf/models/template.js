@@ -1,9 +1,9 @@
-export function getPDFContent(ProjectName, Component) {
+export function getPDFContent(projectName, component, browsers) {
    
     let pdfContent = {
         content: [
             { 
-                text: `Test Plan for ${ProjectName}`, 
+                text: `Test Plan for ${projectName}`, 
                 style: 'header' 
             },
             { 
@@ -13,16 +13,19 @@ export function getPDFContent(ProjectName, Component) {
                 margin: [0, 0, 0, 20]
             },
             { 
-                text: 'This test plan outlines quality measures for delivery the best products to the market.\n\n', 
-                style: 'subheader' 
+                text: 'This Test Plan outlines quality measures in order to delivery the best solution.\n\n', 
+                style: 'subheader'
             },
             {
-                text: `Components Addressed: ${Component}`, 
+                text: `Components: ${component}`, 
+                style: 'sectionTitle'
+            },
+            {
+                text: `Browsers: ${browsers}`, 
                 style: 'sectionTitle'
             },
             {
                 ul: [
-                    { text: 'Browsers to be supported: Chrome, Firefox, Safari', style: 'listItem' },
                     { text: 'Resolution options: iPhone16, iPad, Laptop', style: 'listItem' },
                     { text: 'Accessibility: WCAG 2.1 compliance', style: 'listItem' },
                     { text: 'Security: Ensuring user data confidentiality', style: 'listItem' }

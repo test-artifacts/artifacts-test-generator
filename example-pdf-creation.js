@@ -1,5 +1,5 @@
-import pdfModel from './pdf/pdf-model.js'
-import { getPDFContent } from './pdf/models/template.js'
+import pdfModel from './src/pdf/pdf-model.js'
+import { getPDFContent } from './src/pdf/models/template.js'
 
-let pdfContent = getPDFContent('My project', 'backend')
+let pdfContent = getPDFContent('My project', 'frontend', 'chrome')
 pdfModel(pdfContent)

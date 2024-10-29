@@ -1,34 +1,19 @@
-import { input } from '@inquirer/prompts'
-import { select, confirm } from '@inquirer/prompts'
-import pdfModel from './pdf/pdf-model.js'
-import { getPDFContent } from './pdf/models/template.js'
+import pdfModel from './src/pdf/pdf-model.js'
+import testPlanCommandLine from './src/command-line/test-plan-commandline.js'
+import { getPDFContent } from './src/pdf/models/template.js'
 
-const answerName = await input({ message: 'Enter your project name: ' })
+/*
+this will return the object:
+{
+  answerPdfGeneration:  answerPdfGeneration,
+  projectName: projectName,
+  components: components,
+  browsers: browsers
+}
+*/
+let answer = await testPlanCommandLine()
 
-const answerComponent = await select({
-    message: 'Select the component you want the test plan: ',
-    choices: [
-      {
-        name: 'backend',
-        value: 'backend',
-        description: 'The test plan will be generated following the component backend',
-      },
-      {
-        name: 'frontend',
-        value: 'frontend',
-        description: 'The test plan will be generated following the component backend',
-      },
-      {
-        name: 'backend + frontend',
-        value: 'backend + frontend',
-        description: 'The test plan will be generated following the component backend + frontend',
-      }
-    ],
-  });
-
-const answer = await confirm({ message: 'Should we generate the test plan for you?' });
-
-if(answer === true){
-    let pdfContent = getPDFContent(answerName, answerComponent)
+if(answer.answerPdfGeneration === true){
+    let pdfContent = getPDFContent(answer.projectName, answer.components, answer.browsers)
     pdfModel(pdfContent)
 }
