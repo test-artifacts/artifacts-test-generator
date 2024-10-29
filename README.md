@@ -1,4 +1,7 @@
 # test-artifacts
+
+<img src="test-artifacts.jpeg" alt="Test Artifacts Logo" style="width:50%; height:auto;">
+
 ## Accelerate your testing process with efficient test artifacts generation tools.
 
 Access our documentation to support you to get started:
