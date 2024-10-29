@@ -1,11 +1,11 @@
-# test-artefact
-## Accelerate your testing process with efficient test artefacts generation tools.
+# test-artifacts
+## Accelerate your testing process with efficient test artifacts generation tools.
 
 Access our documentation to support you to get started:
 
-* [Website Test Artefacts](https://test-artefacts.github.io/test-artefacts-site/)
+* [Website Test Artifacts](https://test-artifacts.github.io/artifacts-test-site/)
 
-* [View our projects on Github ](https://github.com/orgs/test-artefacts/repositories)
+* [View our projects on Github ](https://github.com/test-artifacts)
 
 Assure you have installed nodeJS and npm:
 

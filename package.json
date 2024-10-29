@@ -1,6 +1,6 @@
 {
-  "name": "test-artefact",
-  "version": "1.0.5",
+  "name": "test-artifacts",
+  "version": "1.0.1",
   "description": "",
   "type": "module",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/test-artefacts/artefact-test-generator.git"
+    "url": "git+https://github.com/test-artifacts/artifacts-test-generator.git"
   },
   "author": "Guilherme Rogatto",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/test-artefacts/artefact-test-generator/issues"
+    "url": "https://github.com/test-artifacts/artifacts-test-generator/issues"
   },
-  "homepage": "https://github.com/test-artefacts/artefact-test-generator#readme",
+  "homepage": "https://github.com/test-artifacts/artifacts-test-generator#readme",
   "dependencies": {
     "inquirer": "^12.0.1",
     "ora": "^8.1.0",
