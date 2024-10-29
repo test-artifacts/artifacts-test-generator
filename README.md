@@ -24,7 +24,7 @@ npm install
 ## Commandline Usage:
 
 ```
-npm commandline
+npm run commandline
 ```
 
 ![plot](commandline-example.png)
@@ -34,7 +34,7 @@ The PDF will be generated in the root directory you ran the command
 ## Generate test plan as an example:
 
 ```
-npm pdf:example
+npm run pdf:example
 ```
 
 The test plan will look like:
