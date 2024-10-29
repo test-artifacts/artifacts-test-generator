@@ -1,6 +1,6 @@
 # test-artifacts
 
-<img src="test-artifacts.jpeg" alt="Test Artifacts Logo" style="width:50%; height:auto;">
+<img src="test-artifacts.jpeg" alt="Test Artifacts Logo" style="width:25%; height:auto;">
 
 ## Accelerate your testing process with efficient test artifacts generation tools.
 
