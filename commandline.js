@@ -1,6 +1,6 @@
-import pdfModel from './src/pdf/pdf-model.js'
-import testPlanCommandLine from './src/command-line/test-plan-commandline.js'
-import { getPDFContent } from './src/pdf/models/template.js'
+import { pdfModelServer } from './src/pdf/pdf-model.js'
+import { testPlanCommandLine } from './src/command-line/test-plan-commandline.js'
+import { getPDFContentForServer } from './src/pdf/models/template.js'
 
 /*
 this will return the object:
@@ -14,6 +14,6 @@ this will return the object:
 let answer = await testPlanCommandLine()
 
 if(answer.answerPdfGeneration === true){
-    let pdfContent = getPDFContent(answer.projectName, answer.components, answer.browsers)
-    pdfModel(pdfContent)
+    let pdfContent = getPDFContentForServer(answer.projectName, answer.components, answer.browsers)
+    pdfModelServer(pdfContent)
 }

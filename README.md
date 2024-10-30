@@ -18,13 +18,20 @@ Make sure you have those versions of nodeJS at least:
 
 Node.js 20.x, 22.x and above (You may find some issues if you try an older version)
 
-## To install it:
+## If you want to run this project locally you need to clone the project: 
+
+```
+git clone https://github.com/test-artifacts/artifacts-test-generator.git
+```
+
+
+## In the root of the project you need to install dependecies:
 
 ```
 npm install
 ```
 
-## Commandline Usage:
+## Test Artifacts Commandline Usage:
 
 ```
 npm run commandline
@@ -43,3 +50,10 @@ npm run pdf:example
 The test plan will look like:
 
 ![plot](test-plan-example.png)
+
+
+## For Client application whichs interacts with the browsers you can use the following example:
+
+```
+npm run pdf:example:client
+```

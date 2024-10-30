@@ -1,12 +1,13 @@
 {
   "name": "test-artifacts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "commandline": "node commandline.js",
-    "pdf:example": "node example-pdf-creation.js"
+    "pdf:example": "node example-pdf-creation-server.js",
+    "pdf:example:client": "node example-pdf-creation-client.js"
   },
   "repository": {
     "type": "git",

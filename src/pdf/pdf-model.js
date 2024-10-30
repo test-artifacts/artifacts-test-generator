@@ -1,4 +1,6 @@
 import PdfPrinter from 'pdfmake';
+import pdfMake from 'pdfmake/build/pdfmake.js';
+import pdfFonts from 'pdfmake/build/vfs_fonts.js';
 import fs from 'fs';
 
 let fonts = {
@@ -10,9 +12,10 @@ let fonts = {
     },
 };
 
-export default async function pdfModel(description){
+export async function pdfModelServer(content){
+
     let printer = new PdfPrinter(fonts);
-    let pdfDoc =  printer.createPdfKitDocument(description);
+    let pdfDoc =  printer.createPdfKitDocument(content);
     const writeStream = pdfDoc.pipe(fs.createWriteStream('test-plan.pdf'));
     pdfDoc.end();
 
@@ -23,4 +26,14 @@ export default async function pdfModel(description){
     writeStream.on('error', (err) => {
         console.error('Error generating PDF:', err);
     });
+}
+
+export async function pdfModelClient(content, fileName){
+
+    try{
+      pdfMake.vfs = pdfFonts.pdfMake.vfs; // Setting the virtual file system for fonts
+      pdfMake.createPdf(content).download(`${fileName}.pdf`);
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+    }
 }
