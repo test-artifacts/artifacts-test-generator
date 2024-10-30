@@ -59,7 +59,7 @@ export function getPDFContent(projectName, component, browsers) {
             }
         },
         defaultStyle: {
-            font: 'Roboto'
+            font: 'Helvetica'
         }
     };
 
