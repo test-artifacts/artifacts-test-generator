@@ -1,7 +1,7 @@
 import { input } from '@inquirer/prompts'
 import { select, confirm } from '@inquirer/prompts'
 
-export default async function testPlanCommandLine(){
+export async function testPlanCommandLine(){
 
     const projectName = await input({ message: 'Enter your project name: ' })
 
