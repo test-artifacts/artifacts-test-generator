@@ -18,7 +18,7 @@ export async function pdfModelServer(content){
     pdfDoc.end();
 
     writeStream.on('finish', () => {
-        console.log('PDF successfully generated at root of the folder you run this command');
+        console.log('PDF successfully generated on this same folder');
     });
 
     writeStream.on('error', (err) => {
