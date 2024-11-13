@@ -1,5 +1,5 @@
 import { pdfModelServer } from './src/pdf/pdf-model-server.js'
-import { getPDFContentForServer } from './src/pdf/models/template.js'
+import { getPDFContentForServerTestPlan } from './src/pdf/models/pdf-templates.js'
 
-let pdfContent = getPDFContentForServer('Google', 'frontend', 'device')
-pdfModelServer(pdfContent)
+let pdfContent = getPDFContentForServerTestPlan('Google', 'frontend', 'device')
+pdfModelServer(pdfContent, 'test-plan')

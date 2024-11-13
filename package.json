@@ -1,12 +1,12 @@
 {
   "name": "test-artifacts",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "type": "module",
   "main": "commandline.js",
   "scripts": {
     "commandline": "node commandline.js",
-    "pdf:example": "node example-pdf-creation-server.js",
+    "pdf:example:server": "node example-pdf-creation-server.js",
     "pdf:example:client": "node example-pdf-creation-client.js"
   },
   "bin": {
