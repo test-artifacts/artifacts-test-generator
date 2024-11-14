@@ -6,9 +6,9 @@
 
 Test Artifacts will provide you the best test artifact you need for your project, here is the following list of provided test artifacts already available:
 
-|Test Plan|Test Strategy|Traceability Matrix|Performance Strategy|
+|Test Plan|Performance Guideline|Test Strategy|Traceability Matrix|
 |---|---|---|---|
-|&#9989;|&#10060;|&#10060;|&#10060;|
+|&#9989;|&#9989;|&#10060;|&#10060;|
 
 Access our documentation to support you to get started:
 
@@ -64,7 +64,7 @@ npm run commandline
 ## Generate test plan as an example:
 
 ```
-npm run pdf:example
+npm run pdf:example:server
 ```
 
 ## For Client application whichs interacts with the browsers you can use the following example:

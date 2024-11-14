@@ -1,12 +1,12 @@
 import { input } from '@inquirer/prompts'
 import { select } from '@inquirer/prompts'
 
-export async function testPlanCommandLine(){
+export async function performanceGuilineCommandLine(){
 
     const projectName = await input({ message: 'Enter your project name: ' })
 
     const components = await select({
-        message: 'Select the component you want the test plan: ',
+        message: 'Select the components you want us to generate your performance guideline?: ',
         choices: [
         {
             name: 'backend',
@@ -26,34 +26,14 @@ export async function testPlanCommandLine(){
         ],
     });
 
-    let typeOfInterfaceApplication = 'none';
-    if (components != 'backend'){
-        typeOfInterfaceApplication = await select({
-            message: 'Select the type of the interface: ',
-            choices: [
-            {
-                name: 'desktop',
-                value: 'desktop'
-            },
-            {
-                name: 'web',
-                value: 'web'
-            },
-            {
-                name: 'mobile',
-                value: 'mobile'
-            },
-            {
-                name: 'desktop + web + mobile',
-                value: 'desktop + web + mobile'
-            }
-            ],
-        });
-    }
+    const responseTime = await input({ message: 'Add an average of response time to be achived in milliseconds: ' })
+
+    const userPerMinute = await input({ message: 'Users per minute you want to be peforming the requests: ' })
 
     return {
         projectName: projectName,
         components: components,
-        typeOfInterfaceApplication: typeOfInterfaceApplication
+        responseTime: responseTime,
+        userPerMinute: userPerMinute
     }
 }

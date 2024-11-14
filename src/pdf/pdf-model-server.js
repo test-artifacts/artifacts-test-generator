@@ -10,15 +10,15 @@ let fonts = {
     },
 };
 
-export async function pdfModelServer(content){
+export async function pdfModelServer(content, artifactType){
 
     let printer = new PdfPrinter(fonts);
     let pdfDoc =  printer.createPdfKitDocument(content);
-    const writeStream = pdfDoc.pipe(fs.createWriteStream('test-plan.pdf'));
+    const writeStream = pdfDoc.pipe(fs.createWriteStream(`${artifactType}.pdf`));
     pdfDoc.end();
 
     writeStream.on('finish', () => {
-        console.log('PDF successfully generated on this same folder');
+        console.log('Artifact generated on this same folder');
     });
 
     writeStream.on('error', (err) => {

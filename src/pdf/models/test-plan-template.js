@@ -1,4 +1,4 @@
-function createCommonPDFContent(projectName, component, typeInterfaceApplication) {
+export function createCommonPDFContentTestPlan(projectName, component, typeInterfaceApplication) {
     return [
         { 
             text: `Test Plan for ${projectName}`, 
@@ -93,57 +93,4 @@ function createCommonPDFContent(projectName, component, typeInterfaceApplication
 			style: 'sectionTitle'
 		}
     ];
-}
-
-function createPDFStyles() {
-    return {
-        header: {
-            fontSize: 24,
-            bold: true,
-            color: '#1c324a',
-            margin: [0, 20, 0, 10],
-            alignment: 'center'
-        },
-        subheader: {
-            fontSize: 19,
-            italics: true,
-            color: '#1c324a',
-            margin: [0, 20, 0, 20]
-        },
-        sectionTitle: {
-            fontSize: 16,
-            bold: true,
-            color: '#1c324a',
-            margin: [0, 4, 0, 5]
-        },
-        listItem: {
-            fontSize: 12,
-            color: '#333',
-            margin: [0, 0, 0, 5]
-        },
-        tableExample: {
-            margin: [20, 20, 20, 20]
-        }
-    };
-}
-
-export function getPDFContentForServer(projectName, component, browsers) {
-    let pdfContent = {
-        content: createCommonPDFContent(projectName, component, browsers),
-        styles: createPDFStyles(),
-        defaultStyle: {
-            font: 'Helvetica'
-        }
-    };
-
-    return pdfContent;
-}
-
-export function getPDFContentForClient(projectName, component, browsers) {
-    let pdfContent = {
-        content: createCommonPDFContent(projectName, component, browsers),
-        styles: createPDFStyles()
-    };
-
-    return pdfContent;
 }
